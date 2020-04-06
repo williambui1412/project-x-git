@@ -10,7 +10,6 @@ class NewArrivals extends PureComponent {
 		super(props);
 
 		this.state = {
-			currentItemProduct: [],
 			itemMenu: [],
 			itemProduct: [],
 			
@@ -50,7 +49,7 @@ class NewArrivals extends PureComponent {
 			const newProductList2 = newProductList.filter(newProductList => newProductList.categoryId === itemMenu.id ); 			 
 			console.log( newProductList2 );
 			return {
-        itemProduct: newProductList2,
+        //itemProduct: newTodoList,
       };
 		})
 	};
@@ -59,12 +58,11 @@ class NewArrivals extends PureComponent {
 	render() {
 
 		const { itemMenu, activeMenuId, itemProduct } = this.state;
-		const { currentItemProduct } = itemProduct;
 	 
 				
 		return (
 				<>
-					{ itemProduct }
+				
 					<MenuNewArrivals 
 					itemMenu={ itemMenu }
 					activeMenuId = { activeMenuId }
